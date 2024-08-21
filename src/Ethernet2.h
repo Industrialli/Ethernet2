@@ -17,8 +17,6 @@
 #include "EthernetServer.h"
 #include "Dhcp.h"
 
-
-
 class EthernetClass {
 private:
   IPAddress _dnsServerAddress;

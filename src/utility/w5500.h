@@ -18,6 +18,8 @@
 #include <Arduino.h>
 #include <SPI.h>
 
+extern SPIClass spi_ethernet;
+
 extern uint8_t SPI_CS;
 
 
