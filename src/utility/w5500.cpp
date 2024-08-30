@@ -31,7 +31,12 @@ void W5500Class::init(uint8_t ss_pin)
 
   delay(1000);
   initSS();
+  
+  spi_ethernet.setMISO(PB14);
+  spi_ethernet.setMOSI(PB15);
+  spi_ethernet.setSCLK(PB13);
   spi_ethernet.begin();
+  
   w5500.swReset();
   for (int i=0; i<MAX_SOCK_NUM; i++) {
     uint8_t cntl_byte = (0x0C + (i<<5));
