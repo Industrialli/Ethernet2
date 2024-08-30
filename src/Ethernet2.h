@@ -29,8 +29,8 @@ public:
   static uint8_t _state[MAX_SOCK_NUM];
   static uint16_t _server_port[MAX_SOCK_NUM];
 
-  EthernetClass() { _dhcp = NULL; w5500_cspin = 10; }
-  void init(uint8_t _cspin = 10) { w5500_cspin = _cspin; }
+  EthernetClass() { _dhcp = NULL; w5500_cspin = PB12; }
+  void init(uint8_t _cspin = PB12) { w5500_cspin = _cspin; }
 
 #if defined(WIZ550io_WITH_MACADDRESS)
   // Initialize function when use the ioShield serise (included WIZ550io)
